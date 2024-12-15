@@ -7,6 +7,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f0f0;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -85,6 +86,24 @@ nav {
     background-color: #3a83b5;
 }
 
+.about {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .blog {
     background-color: #fff;
     padding: 60px 20px;
@@ -136,6 +155,32 @@ nav {
 
 .post-form input,
 .post-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
