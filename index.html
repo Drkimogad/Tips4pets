@@ -27,10 +27,25 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Discover the Beauty of Nature</h1>
-            <p>Explore breathtaking landscapes and awe-inspiring places around the world. Join us on an adventure through the wonders of nature.</p>
+            <h1 id="hero-caption">Discover the Beauty of Nature</h1>
+            <p id="hero-subtext">Explore breathtaking landscapes and awe-inspiring places around the world. Join us on an adventure through the wonders of nature.</p>
             <a href="#blog" class="cta-button">Start Exploring</a>
         </div>
+    </section>
+
+    <!-- Customization Panel for Homepage -->
+    <section class="customization">
+        <h2>Customize Homepage</h2>
+        <label for="cover-photo">Upload New Cover Photo:</label>
+        <input type="file" id="cover-photo" accept="image/*">
+
+        <label for="caption">Edit Caption:</label>
+        <input type="text" id="caption" placeholder="Enter new caption" />
+
+        <label for="custom-html">Custom HTML Block (Add link to Chatbot):</label>
+        <textarea id="custom-html" placeholder="Enter custom HTML (e.g., link to your chatbot)"></textarea>
+        
+        <button id="update-homepage" class="cta-button">Update Homepage</button>
     </section>
 
     <!-- About Us Section -->
@@ -44,12 +59,6 @@
         <h2>Blog Posts</h2>
         <div id="posts-container" class="blog-posts">
             <!-- Blog posts will be dynamically inserted here -->
-        </div>
-        <div class="post-form">
-            <h3>Add a New Blog Post</h3>
-            <input type="text" id="post-title" placeholder="Title" required>
-            <textarea id="post-summary" placeholder="Write a summary..." required></textarea>
-            <button id="add-post-btn" class="cta-button">Add Post</button>
         </div>
     </section>
 
