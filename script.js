@@ -1,68 +1,27 @@
-// Array to store blog posts (emulating a database)
-const blogPosts = [
-    {
-        title: 'The Majestic Mountains',
-        summary: 'Mountains offer some of the most breathtaking views in nature. Let’s explore the beauty of towering peaks.',
-        link: '#'
-    },
-    {
-        title: 'Sunset by the Sea',
-        summary: 'There’s nothing like the beauty of a sunset over the ocean. Join us as we explore the tranquil waves.',
-        link: '#'
-    },
-    {
-        title: 'The Quiet Forest',
-        summary: 'Forests are peaceful havens full of life. Let’s take a walk through the forest and enjoy the serenity.',
-        link: '#'
+document.getElementById('update-homepage').addEventListener('click', function() {
+    // 1. Change Cover Photo
+    const coverPhotoInput = document.getElementById('cover-photo');
+    const heroSection = document.querySelector('.hero');
+    if (coverPhotoInput.files.length > 0) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            heroSection.style.backgroundImage = `url(${e.target.result})`;
+        };
+        reader.readAsDataURL(coverPhotoInput.files[0]);
     }
-];
 
-// Function to render blog posts
-function renderBlogPosts() {
-    const postsContainer = document.getElementById('posts-container');
-    postsContainer.innerHTML = '';  // Clear current posts
-
-    blogPosts.forEach(post => {
-        const postDiv = document.createElement('div');
-        postDiv.classList.add('blog-post');
-
-        const postTitle = document.createElement('h3');
-        postTitle.textContent = post.title;
-
-        const postSummary = document.createElement('p');
-        postSummary.textContent = post.summary;
-
-        const postLink = document.createElement('a');
-        postLink.href = post.link;
-        postLink.textContent = 'Read more';
-
-        postDiv.appendChild(postTitle);
-        postDiv.appendChild(postSummary);
-        postDiv.appendChild(postLink);
-
-        postsContainer.appendChild(postDiv);
-    });
-}
-
-// Function to add new blog post
-document.getElementById('add-post-btn').addEventListener('click', function () {
-    const title = document.getElementById('post-title').value;
-    const summary = document.getElementById('post-summary').value;
-
-    if (title && summary) {
-        blogPosts.push({
-            title: title,
-            summary: summary,
-            link: '#'
-        });
-
-        renderBlogPosts();
-        document.getElementById('post-title').value = '';
-        document.getElementById('post-summary').value = '';
-    } else {
-        alert('Please fill in all fields');
+    // 2. Change Caption
+    const captionInput = document.getElementById('caption');
+    const heroCaption = document.getElementById('hero-caption');
+    if (captionInput.value) {
+        heroCaption.textContent = captionInput.value;
     }
+
+    // 3. Add Custom HTML Block (e.g., Chatbot Link)
+    const customHtmlInput = document.getElementById('custom-html').value;
+    const customBlock = document.createElement('div');
+    customBlock.innerHTML = customHtmlInput;  // Inserting the custom HTML
+    document.querySelector('.hero-text').appendChild(customBlock);
+
+    alert('Homepage updated successfully!');
 });
-
-// Initial rendering of blog posts
-renderBlogPosts();
