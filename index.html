@@ -1,100 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>My Tailwind Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="styles.css" rel="stylesheet" />
-</head>
-
-<body class="font-roboto">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-roboto">
   <!-- Header -->
   <header class="bg-blue-900 text-white">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <div class="text-2xl font-bold">
-        My Website
-      </div>
-      <nav>
-        <ul class="hidden md:flex space-x-4">
-          <li>
-            <a class="hover:text-gray-400" href="#">Home</a>
-          </li>
-          <li>
-            <a class="hover:text-gray-400" href="#">About</a>
-          </li>
-          <li>
-            <a class="hover:text-gray-400" href="#">Services</a>
-          </li>
-          <li>
-            <a class="hover:text-gray-400" href="#">Contact</a>
-          </li>
-        </ul>
-        <button class="md:hidden text-white focus:outline-none" id="nav-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
+   <div class="container mx-auto flex justify-between items-center p-4">
+    <div class="text-2xl font-bold">
+     My Website
     </div>
-    <div class="hidden" id="nav-menu">
-      <ul class="flex flex-col space-y-4 p-4">
-        <li><a class="hover:text-gray-400" href="#">Home</a></li>
-        <li><a class="hover:text-gray-400" href="#">About</a></li>
-        <li><a class="hover:text-gray-400" href="#">Services</a></li>
-        <li><a class="hover:text-gray-400" href="#">Contact</a></li>
-      </ul>
-    </div>
+    <nav>
+     <ul class="hidden md:flex space-x-4">
+      <li><a class="hover:text-gray-400" href="#">Home</a></li>
+      <li><a class="hover:text-gray-400" href="#">About</a></li>
+      <li><a class="hover:text-gray-400" href="#">Services</a></li>
+      <li><a class="hover:text-gray-400" href="#">Contact</a></li>
+     </ul>
+     <button class="md:hidden text-white focus:outline-none" id="nav-toggle">
+      <i class="fas fa-bars"></i>
+     </button>
+    </nav>
+   </div>
+   <div class="hidden md:hidden" id="nav-menu">
+    <ul class="flex flex-col space-y-4 p-4">
+     <li><a class="hover:text-gray-400" href="#">Home</a></li>
+     <li><a class="hover:text-gray-400" href="#">About</a></li>
+     <li><a class="hover:text-gray-400" href="#">Services</a></li>
+     <li><a class="hover:text-gray-400" href="#">Contact</a></li>
+    </ul>
+   </div>
   </header>
 
   <!-- Hero Section -->
   <section class="relative text-center py-20">
-    <img alt="Hero image" class="absolute inset-0 w-full h-full object-cover opacity-50" src="https://storage.googleapis.com/a1aa/image/UjvDlNco8HKhJlaynOisZ9V79Lv4L4D3zBhffrzLYfHdUh1nA.jpg" />
-    <div class="relative container mx-auto">
-      <h1 class="text-4xl font-bold mb-4 text-white">
-        Welcome to My Website
-      </h1>
-      <p class="text-lg mb-8 text-white">
-        This is a simple hero section with a call to action.
-      </p>
-      <a class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300" href="#">
-        Get Started
-      </a>
-    </div>
+   <img alt="Background image" class="absolute inset-0 w-full h-full object-cover opacity-50" height="1080" src="https://storage.googleapis.com/a1aa/image/UjvDlNco8HKhJlaynOisZ9V79Lv4L4D3zBhffrzLYfHdUh1nA.jpg" width="1920"/>
+   <div class="relative container mx-auto">
+    <h1 class="text-4xl font-bold mb-4 text-white">
+     Welcome to My Website
+    </h1>
+    <p class="text-lg mb-8 text-white">
+     This is a simple hero section with a call to action.
+    </p>
+    <a class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300" href="#">
+     Get Started
+    </a>
+   </div>
   </section>
 
   <!-- Content Section -->
   <section class="container mx-auto py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-        <img alt="Content 1" class="w-full h-48 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/fYqVqhqUQFVqKKFwS7RWtPWNYAEVuogQlRqXUjPRHATIVY9JA.jpg" />
-        <h2 class="text-2xl font-bold mt-4">Content Title 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-        <img alt="Content 2" class="w-full h-48 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/eECiCoUaVm3tbqMs4YQqzg4dyfFukzW0AIJdI5wbwe9XUh1nA.jpg" />
-        <h2 class="text-2xl font-bold mt-4">Content Title 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-        <img alt="Content 3" class="w-full h-48 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/qzfODnv666SeqkeZOmIoP7Ob2cgbo98F1KA0ZGbpike2oCrPB.jpg" />
-        <h2 class="text-2xl font-bold mt-4">Content Title 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-      </div>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+     <img alt="Image 1" class="w-full h-48 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/fYqVqhqUQFVqKKFwS7RWtPWNYAEVuogQlRqXUjPRHATIVY9JA.jpg" />
+     <h2 class="text-2xl font-bold mt-4">Content Title 1</h2>
+     <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+     <img alt="Image 2" class="w-full h-48 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/eECiCoUaVm3tbqMs4YQqzg4dyfFukzW0AIJdI5wbwe9XUh1nA.jpg" />
+     <h2 class="text-2xl font-bold mt-4">Content Title 2</h2>
+     <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+     <img alt="Image 3" class="w-full h-48 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/qzfODnv666SeqkeZOmIoP7Ob2cgbo98F1KA0ZGbpike2oCrPB.jpg" />
+     <h2 class="text-2xl font-bold mt-4">Content Title 3</h2>
+     <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+   </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section class="bg-gray-100 py-12">
+   <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-6">Leave Your Feedback</h2>
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+     <form id="feedback-form">
+      <div class="mb-4">
+       <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" placeholder="Your Name" type="text" required />
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" placeholder="Your Email" type="email" required />
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+       <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
+      </div>
+     </form>
+    </div>
+   </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-blue-900 text-white py-6">
-    <div class="container mx-auto text-center">
-      <p>© 2023 My Website. All rights reserved.</p>
-    </div>
+   <div class="container mx-auto text-center">
+    <p>© 2023 My Website. All rights reserved.</p>
+   </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      document.getElementById('nav-menu').classList.toggle('hidden');
+    });
 
-</body>
-
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for your feedback!');
+    });
+  </script>
+ </body>
 </html>
