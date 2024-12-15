@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PawsitiveVet</title>
+    <title>Explore Nature</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,7 +14,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">PawsitiveVet</div>
+            <div class="logo">Explore Nature</div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#blog">Blog Posts</a></li>
@@ -27,33 +27,16 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1 id="hero-caption">Welcome to PawsitiveVet</h1>
-            <p id="hero-subtext">Your trusted partner for pet care and health.</p>
-            <a href="#blog" class="cta-button">Explore Our Blog</a>
-            <a href="#chatbot" class="cta-button">Chat with Us</a> <!-- Link to your chatbot -->
+            <h1>Discover the Beauty of Nature</h1>
+            <p>Explore breathtaking landscapes and awe-inspiring places around the world. Join us on an adventure through the wonders of nature.</p>
+            <a href="#blog" class="cta-button">Start Exploring</a>
         </div>
-    </section>
-
-    <!-- Customization Panel -->
-    <section class="customization">
-        <h2>Customize Homepage</h2>
-        <label for="cover-photo">Upload New Cover Photo:</label>
-        <input type="file" id="cover-photo" accept="image/*">
-
-        <label for="caption">Edit Caption:</label>
-        <input type="text" id="caption" placeholder="Enter new caption" />
-
-        <label for="custom-html">Custom HTML Block (Add link to Chatbot):</label>
-        <textarea id="custom-html" placeholder="Enter custom HTML (e.g., link to your chatbot)"></textarea>
-
-        <button id="update-homepage" class="cta-button">Update Homepage</button>
     </section>
 
     <!-- About Us Section -->
     <section id="about" class="about">
         <h2>About Us</h2>
-        <p>At PawsitiveVet, we are dedicated to providing high-quality care for your pets. Our team of veterinary professionals ensures that your furry friends receive the best care possible.</p>
-        <p>We believe in building long-lasting relationships with our clients and their pets, offering expert advice and services to help pets live happy, healthy lives. Our mission is to be your trusted partner in pet care, ensuring your pets are in the best hands.</p>
+        <p>We are passionate about nature and the environment. Our mission is to inspire people to explore the world around them and to take steps toward preserving its beauty. Whether you're an avid traveler or a nature enthusiast, our content will connect you with the world’s most stunning landscapes.</p>
     </section>
 
     <!-- Blog Section -->
@@ -61,6 +44,12 @@
         <h2>Blog Posts</h2>
         <div id="posts-container" class="blog-posts">
             <!-- Blog posts will be dynamically inserted here -->
+        </div>
+        <div class="post-form">
+            <h3>Add a New Blog Post</h3>
+            <input type="text" id="post-title" placeholder="Title" required>
+            <textarea id="post-summary" placeholder="Write a summary..." required></textarea>
+            <button id="add-post-btn" class="cta-button">Add Post</button>
         </div>
     </section>
 
@@ -77,7 +66,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 PawsitiveVet. All rights reserved.</p>
+        <p>&copy; 2024 Explore Nature. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
