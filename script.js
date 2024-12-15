@@ -1,34 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Check if admin is authenticated (for simple demo, using localStorage)
-    const adminPassword = "admin123"; // set your admin password
-    const enteredPassword = localStorage.getItem("adminPassword");
+  // Feedback Form Submission
+  document.getElementById("feedback-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    
+    // Store feedback locally or show a message
+    localStorage.setItem("feedback", JSON.stringify({ name, email, message }));
+    alert("Thank you for your feedback!");
+    
+    // Clear the form
+    document.getElementById("feedback-form").reset();
+  });
 
+  // Admin Login (password protection)
+  const adminPassword = "admin123"; // Change password for admin access
+  let isAdmin = false;
+
+  function checkAdminAccess() {
+    const enteredPassword = prompt("Enter Admin Password:");
     if (enteredPassword === adminPassword) {
-        document.getElementById("admin-dashboard").style.display = "block"; // show admin dashboard
+      isAdmin = true;
+      document.getElementById("admin-dashboard").classList.remove("hidden");
+    } else {
+      alert("Incorrect password");
     }
+  }
 
-    // Form submission to save homepage settings
-    document.getElementById("settings-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const newTitle = document.getElementById("new-title").value;
-        const heroTitle = document.getElementById("hero-title").value;
-        const heroDescription = document.getElementById("hero-description").value;
+  // Check admin access on page load
+  checkAdminAccess();
 
-        // Save data to localStorage
-        localStorage.setItem("siteTitle", newTitle);
-        localStorage.setItem("heroTitle", heroTitle);
-        localStorage.setItem("heroDescription", heroDescription);
+  // Homepage content editing
+  document.getElementById("edit-homepage").addEventListener("click", function () {
+    document.getElementById("homepage-edit").classList.toggle("hidden");
+  });
 
-        // Update homepage dynamically
-        document.getElementById("site-title").textContent = newTitle || "My Website";
-        document.getElementById("hero-title").textContent = heroTitle || "Welcome to My Website";
-        document.getElementById("hero-description").textContent = heroDescription || "This is a simple hero section with a call to action.";
-
-        alert("Settings updated successfully!");
-    });
-
-    // Handle navigation toggle
-    document.getElementById("nav-toggle").addEventListener("click", function () {
-        document.getElementById("nav-menu").classList.toggle("hidden");
-    });
+  document.getElementById("save-homepage").addEventListener("click", function () {
+    const newContent = document.getElementById("homepage-content").value;
+    document.querySelector("h1").textContent = newContent; // Update homepage content
+    alert("Homepage content updated!");
+  });
 });
