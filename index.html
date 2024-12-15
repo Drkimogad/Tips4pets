@@ -17,7 +17,7 @@
             <div class="logo">Explore Nature</div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="#blog">Blog Posts</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -33,14 +33,17 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <h2>Nature's Wonders</h2>
-        <div class="gallery-images">
-            <img src="https://via.placeholder.com/600x400" alt="Mountain View">
-            <img src="https://via.placeholder.com/600x400" alt="Beach Sunset">
-            <img src="https://via.placeholder.com/600x400" alt="Forest Path">
-            <img src="https://via.placeholder.com/600x400" alt="Desert Oasis">
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <h2>Blog Posts</h2>
+        <div id="posts-container" class="blog-posts">
+            <!-- Blog posts will be dynamically inserted here -->
+        </div>
+        <div class="post-form">
+            <h3>Add a New Blog Post</h3>
+            <input type="text" id="post-title" placeholder="Title" required>
+            <textarea id="post-summary" placeholder="Write a summary..." required></textarea>
+            <button id="add-post-btn" class="cta-button">Add Post</button>
         </div>
     </section>
 
