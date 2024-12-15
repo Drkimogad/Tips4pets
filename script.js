@@ -1,44 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Feedback Form Submission
-  document.getElementById("feedback-form").addEventListener("submit", function (e) {
+// Example of a simple form validation
+document.querySelector('.contact form').addEventListener('submit', function (e) {
     e.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-    
-    // Store feedback locally or show a message
-    localStorage.setItem("feedback", JSON.stringify({ name, email, message }));
-    alert("Thank you for your feedback!");
-    
-    // Clear the form
-    document.getElementById("feedback-form").reset();
-  });
 
-  // Admin Login (password protection)
-  const adminPassword = "admin123"; // Change password for admin access
-  let isAdmin = false;
+    let name = document.querySelector('input[type="text"]').value;
+    let email = document.querySelector('input[type="email"]').value;
+    let message = document.querySelector('textarea').value;
 
-  function checkAdminAccess() {
-    const enteredPassword = prompt("Enter Admin Password:");
-    if (enteredPassword === adminPassword) {
-      isAdmin = true;
-      document.getElementById("admin-dashboard").classList.remove("hidden");
+    if (name && email && message) {
+        alert('Message sent successfully!');
+        document.querySelector('.contact form').reset();
     } else {
-      alert("Incorrect password");
+        alert('Please fill in all fields.');
     }
-  }
-
-  // Check admin access on page load
-  checkAdminAccess();
-
-  // Homepage content editing
-  document.getElementById("edit-homepage").addEventListener("click", function () {
-    document.getElementById("homepage-edit").classList.toggle("hidden");
-  });
-
-  document.getElementById("save-homepage").addEventListener("click", function () {
-    const newContent = document.getElementById("homepage-content").value;
-    document.querySelector("h1").textContent = newContent; // Update homepage content
-    alert("Homepage content updated!");
-  });
 });
