@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Nature</title>
+    <title>Business Insights</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Explore Nature</div>
+            <div class="logo">Business Insights</div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#blog">Blog Posts</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
             </ul>
         </nav>
     </header>
@@ -27,16 +26,21 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Discover the Beauty of Nature</h1>
-            <p>Explore breathtaking landscapes and awe-inspiring places around the world. Join us on an adventure through the wonders of nature.</p>
-            <a href="#blog" class="cta-button">Start Exploring</a>
+            <h1 id="hero-title">Discover the Secrets of Business Success</h1>
+            <p id="hero-description">
+                Explore strategies, insights, and stories that will transform your business journey. Join us to navigate the ever-changing world of business management.
+            </p>
+            <button class="cta-button" onclick="editHero()">Edit</button>
         </div>
     </section>
 
     <!-- About Us Section -->
     <section id="about" class="about">
         <h2>About Us</h2>
-        <p>We are passionate about nature and the environment. Our mission is to inspire people to explore the world around them and to take steps toward preserving its beauty. Whether you're an avid traveler or a nature enthusiast, our content will connect you with the world’s most stunning landscapes.</p>
+        <p id="about-description">
+            Welcome to Business Insights, your go-to resource for understanding the latest trends in business management. From human resources to digital marketing, we provide actionable insights to help you thrive in your professional endeavors.
+        </p>
+        <button class="cta-button" onclick="editAbout()">Edit</button>
     </section>
 
     <!-- Blog Section -->
@@ -53,23 +57,65 @@
         </div>
     </section>
 
-    <!-- Get in Touch Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="cta-button">Send Message</button>
-        </form>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Featured</h2>
+        <div class="gallery-container">
+            <div class="gallery-item" onclick="updateGallery(1)">
+                <img src="image1.jpg" alt="Featured Image 1">
+                <p>Featured Insight #1</p>
+            </div>
+            <div class="gallery-item" onclick="updateGallery(2)">
+                <img src="image2.jpg" alt="Featured Image 2">
+                <p>Featured Insight #2</p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Explore Nature. All rights reserved.</p>
+        <p>&copy; 2024 Business Insights. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Editable Hero Section
+        function editHero() {
+            const title = prompt("Enter a new title:", document.getElementById("hero-title").textContent);
+            const description = prompt("Enter a new description:", document.getElementById("hero-description").textContent);
+            if (title) document.getElementById("hero-title").textContent = title;
+            if (description) document.getElementById("hero-description").textContent = description;
+        }
+
+        // Editable About Section
+        function editAbout() {
+            const description = prompt("Edit 'About Us' content:", document.getElementById("about-description").textContent);
+            if (description) document.getElementById("about-description").textContent = description;
+        }
+
+        // Add Blog Posts
+        document.getElementById("add-post-btn").addEventListener("click", function () {
+            const title = document.getElementById("post-title").value.trim();
+            const summary = document.getElementById("post-summary").value.trim();
+            if (title && summary) {
+                const postContainer = document.createElement("div");
+                postContainer.className = "blog-post";
+                postContainer.innerHTML = `<h3>${title}</h3><p>${summary}</p>`;
+                document.getElementById("posts-container").appendChild(postContainer);
+                document.getElementById("post-title").value = "";
+                document.getElementById("post-summary").value = "";
+            } else {
+                alert("Please fill in both fields.");
+            }
+        });
+
+        // Update Gallery Items
+        function updateGallery(itemNumber) {
+            const newDescription = prompt(`Edit description for Featured Insight #${itemNumber}:`);
+            if (newDescription) {
+                document.querySelector(`.gallery-item:nth-child(${itemNumber}) p`).textContent = newDescription;
+            }
+        }
+    </script>
 </body>
 
 </html>
