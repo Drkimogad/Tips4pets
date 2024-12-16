@@ -1,41 +1,56 @@
-// Editable Hero Section
-function editHero() {
-    const title = prompt("Enter a new title:", document.getElementById("hero-title").textContent);
-    const description = prompt("Enter a new description:", document.getElementById("hero-description").textContent);
-    const image = prompt("Enter the URL of a new image (or leave blank to keep current):");
-    if (title) document.getElementById("hero-title").textContent = title;
-    if (description) document.getElementById("hero-description").textContent = description;
-    if (image) document.getElementById("hero-image").src = image;
+// Editable About Us
+function editAboutUs() {
+    const aboutText = prompt("Edit About Us Text:", document.getElementById("about-us-text").innerText);
+    if (aboutText !== null) {
+        document.getElementById("about-us-text").innerText = aboutText;
+    }
 }
 
-// Edit Packages Section
+// Editable Packages
 function editPackages() {
-    const packages = prompt("Enter packages separated by commas:", Array.from(document.querySelectorAll("#packages-list li")).map(item => item.textContent).join(", "));
-    if (packages) {
+    const packagesText = prompt("Edit Packages (separate by commas):", 
+        Array.from(document.querySelectorAll("#packages-list li")).map(li => li.innerText).join(", "));
+    if (packagesText !== null) {
+        const packages = packagesText.split(",").map(p => p.trim());
         const packagesList = document.getElementById("packages-list");
-        packagesList.innerHTML = "";
-        packages.split(",").forEach(pkg => {
-            const listItem = document.createElement("li");
-            listItem.textContent = pkg.trim();
-            packagesList.appendChild(listItem);
+        packagesList.innerHTML = ""; // Clear existing
+        packages.forEach(pkg => {
+            const li = document.createElement("li");
+            li.innerText = pkg;
+            packagesList.appendChild(li);
         });
     }
 }
 
-// Edit Email
+// Editable Email
 function editEmail() {
-    const email = prompt("Enter a new email:", document.getElementById("email").textContent);
-    if (email) document.getElementById("email").textContent = email;
+    const email = prompt("Edit Email:", document.getElementById("email").innerText);
+    if (email !== null) {
+        document.getElementById("email").innerText = email;
+    }
 }
 
-// Edit WhatsApp
+// Editable WhatsApp
 function editWhatsApp() {
-    const whatsapp = prompt("Enter a new WhatsApp number:", document.getElementById("whatsapp").textContent);
-    if (whatsapp) document.getElementById("whatsapp").textContent = whatsapp;
+    const whatsapp = prompt("Edit WhatsApp Number:", document.getElementById("whatsapp").innerText);
+    if (whatsapp !== null) {
+        document.getElementById("whatsapp").innerText = whatsapp;
+    }
 }
 
-// Edit About Us
-function editAboutUs() {
-    const aboutUsText = prompt("Edit the 'About Us' section:", document.getElementById("about-us-text").textContent);
-    if (aboutUsText) document.getElementById("about-us-text").textContent = aboutUsText;
+// Editable Hero Section
+function editHero() {
+    const title = prompt("Edit Hero Title:", document.getElementById("hero-title").innerText);
+    const description = prompt("Edit Hero Description:", document.getElementById("hero-description").innerText);
+    const imageUrl = prompt("Enter URL for Hero Image:", document.getElementById("hero-image").src);
+
+    if (title !== null) {
+        document.getElementById("hero-title").innerText = title;
+    }
+    if (description !== null) {
+        document.getElementById("hero-description").innerText = description;
+    }
+    if (imageUrl !== null) {
+        document.getElementById("hero-image").src = imageUrl;
+    }
 }
