@@ -10,33 +10,50 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Left Section -->
-        <div class="left-panel">
-            <!-- Explore Our Packages -->
-            <div class="block" id="packages-block">
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Side - Editable Blocks -->
+        <div class="left-container">
+            <div class="logo">
+                <h1>SocialGlow</h1>
+            </div>
+
+            <!-- About Us Block -->
+            <div class="block about-us">
+                <h3>About Us</h3>
+                <p id="about-us-text">We help businesses shine online through tailored social media management and creative strategies. Let's make your brand stand out!</p>
+                <button onclick="editAboutUs()">Edit About Us</button>
+            </div>
+
+            <!-- Explore Packages Block -->
+            <div class="block explore">
                 <h3>Explore Our Packages</h3>
                 <ul id="packages-list">
-                    <li>Social Media Strategy</li>
-                    <li>Content Creation</li>
-                    <li>Analytics and Reporting</li>
+                    <li>Basic Social Media Setup</li>
+                    <li>Content Creation Packages</li>
+                    <li>Advanced Engagement Services</li>
                 </ul>
                 <button onclick="editPackages()">Edit Packages</button>
             </div>
 
-            <!-- Contact Us -->
-            <div class="block" id="contact-block">
+            <!-- Contact Us Block -->
+            <div class="block contact">
                 <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:info@socialglow.com">info@socialglow.com</a></p>
-                <p>WhatsApp: <a href="https://wa.me/1234567890" target="_blank">+1234567890</a></p>
+                <p>Email: <span id="email">contact@socialglow.com</span></p>
+                <button onclick="editEmail()">Edit Email</button>
+                <p>WhatsApp: <span id="whatsapp">+1234567890</span></p>
+                <button onclick="editWhatsApp()">Edit WhatsApp</button>
             </div>
         </div>
 
-        <!-- Right Section (Hero Banner) -->
-        <div class="hero">
-            <h1 id="hero-title">Welcome to SocialGlow</h1>
-            <p id="hero-description">Empowering your brand with stunning social media management solutions. Let’s grow together!</p>
-            <button onclick="editHero()">Edit Hero</button>
+        <!-- Right Side - Hero Banner -->
+        <div class="right-container">
+            <div class="hero-banner">
+                <h1 id="hero-title">Welcome to SocialGlow</h1>
+                <p id="hero-description">Transform your online presence with our social media expertise. Let us help your brand shine on every platform.</p>
+                <img id="hero-image" src="default.jpg" alt="Hero Banner" />
+                <button onclick="editHero()">Edit Hero Section</button>
+            </div>
         </div>
     </div>
 
