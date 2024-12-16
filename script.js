@@ -6,32 +6,28 @@ function editHero() {
     if (description) document.getElementById("hero-description").textContent = description;
 }
 
-// Editable About Section
-function editAbout() {
-    const description = prompt("Edit 'About Us' content:", document.getElementById("about-description").textContent);
-    if (description) document.getElementById("about-description").textContent = description;
+// Edit Packages Section
+function editPackages() {
+    const packages = prompt("Enter packages separated by commas:", Array.from(document.querySelectorAll("#packages-list li")).map(item => item.textContent).join(", "));
+    if (packages) {
+        const packagesList = document.getElementById("packages-list");
+        packagesList.innerHTML = "";
+        packages.split(",").forEach(pkg => {
+            const listItem = document.createElement("li");
+            listItem.textContent = pkg.trim();
+            packagesList.appendChild(listItem);
+        });
+    }
 }
 
-// Add Blog Posts
-document.getElementById("add-post-btn").addEventListener("click", function () {
-    const title = document.getElementById("post-title").value.trim();
-    const summary = document.getElementById("post-summary").value.trim();
-    if (title && summary) {
-        const postContainer = document.createElement("div");
-        postContainer.className = "blog-post";
-        postContainer.innerHTML = `<h3>${title}</h3><p>${summary}</p>`;
-        document.getElementById("posts-container").appendChild(postContainer);
-        document.getElementById("post-title").value = "";
-        document.getElementById("post-summary").value = "";
-    } else {
-        alert("Please fill in both fields.");
-    }
-});
+// Edit Email
+function editEmail() {
+    const email = prompt("Enter a new email:", document.getElementById("email").textContent);
+    if (email) document.getElementById("email").textContent = email;
+}
 
-// Update Gallery Items
-function updateGallery(itemNumber) {
-    const newDescription = prompt(`Edit description for Featured Insight #${itemNumber}:`);
-    if (newDescription) {
-        document.querySelector(`.gallery-item:nth-child(${itemNumber}) p`).textContent = newDescription;
-    }
+// Edit WhatsApp
+function editWhatsApp() {
+    const whatsapp = prompt("Enter a new WhatsApp number:", document.getElementById("whatsapp").textContent);
+    if (whatsapp) document.getElementById("whatsapp").textContent = whatsapp;
 }
