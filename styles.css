@@ -93,25 +93,36 @@ body {
 }
 
 .hero-banner {
-    text-align: left;
-    max-width: 500px;
+    position: relative;
     width: 100%;
-    margin-top: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
 }
 
-.hero-banner h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #fff;
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the entire section */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.hero-banner p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #fff;
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay for better text visibility */
+    border-radius: 8px;
 }
 
-.hero-banner button {
+.hero-text button {
     background-color: #333;
     color: white;
     padding: 10px 20px;
@@ -119,21 +130,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    margin: 5px;
 }
 
-.hero-banner button:hover {
+.hero-text button:hover {
     background-color: #555;
-}
-
-/* Admin Photo */
-#admin-photo {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
