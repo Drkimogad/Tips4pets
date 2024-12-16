@@ -1,197 +1,46 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* General Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
-    scroll-behavior: smooth;
-}
-
-header {
-    background-color: #2d3e3f;
-    color: white;
-    padding: 20px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #61dafb;
-}
-
+/* Hero Section */
 .hero {
-    background-image: url('https://via.placeholder.com/1920x1080');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: #61dafb;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #2d3e3f;
-    transition: background-color 0.3s ease;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 .cta-button:hover {
-    background-color: #3a83b5;
+    background-color: #45a049;
 }
 
-.about {
-    background-color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
+/* About Section */
 .about p {
-    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
     line-height: 1.6;
-    max-width: 900px;
-    margin: 0 auto;
+    color: #555;
 }
 
-.blog {
-    background-color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.blog h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.blog-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.blog-post {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.blog-post p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.blog-post a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #61dafb;
-}
-
-.post-form {
-    margin-top: 40px;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.post-form input,
-.post-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-.contact {
-    background-color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact input,
-.contact textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-footer {
-    background-color: #2d3e3f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+/*
