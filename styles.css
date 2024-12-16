@@ -111,15 +111,6 @@ body {
     color: #fff;
 }
 
-.hero-banner img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
 .hero-banner button {
     background-color: #333;
     color: white;
@@ -132,6 +123,17 @@ body {
 
 .hero-banner button:hover {
     background-color: #555;
+}
+
+/* Admin Photo */
+#admin-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
