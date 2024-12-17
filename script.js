@@ -1,69 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Event Listener for "Get Started" button
-    document.getElementById("learn-more-btn").addEventListener("click", () => {
-        // Scroll to the "Packages" section
-        document.getElementById("packages-section").scrollIntoView({ behavior: "smooth" });
+    // Event Listener for "About Us" Block Edit
+    document.getElementById("about-us-text").addEventListener("click", () => {
+        const aboutUsText = prompt("Edit About Us", document.getElementById("about-us-text").textContent);
+        if (aboutUsText !== null) {
+            document.getElementById("about-us-text").textContent = aboutUsText;
+        }
     });
 
-    // Event Listener for "Contact Us" button
-    document.getElementById("contact-us-btn").addEventListener("click", () => {
-        // Scroll to the contact section
-        document.getElementById("contact-section").scrollIntoView({ behavior: "smooth" });
+    // Event Listener for "Packages" Block Edit
+    document.getElementById("packages-list").addEventListener("click", () => {
+        const packagesText = prompt("Edit Packages", document.getElementById("packages-list").innerText);
+        if (packagesText !== null) {
+            document.getElementById("packages-list").innerText = packagesText;
+        }
+    });
+
+    // Event Listener for "Contact Us" Block Edit
+    document.getElementById("email").addEventListener("click", () => {
+        const newEmail = prompt("Edit Email", document.getElementById("email").textContent);
+        if (newEmail !== null) {
+            document.getElementById("email").textContent = newEmail;
+        }
+    });
+
+    document.getElementById("whatsapp").addEventListener("click", () => {
+        const newWhatsApp = prompt("Edit WhatsApp Number", document.getElementById("whatsapp").textContent);
+        if (newWhatsApp !== null) {
+            document.getElementById("whatsapp").textContent = newWhatsApp;
+        }
     });
 
     // Dynamically set the admin photo
     const adminPhoto = document.getElementById("admin-photo");
     adminPhoto.src = "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
-
-    // WhatsApp Number Script - Allow dynamic number changes
-
-    // Default WhatsApp number
-    const defaultWhatsAppNumber = '0027720138750';
-    const whatsappLink = document.getElementById("whatsapp-link");
-
-    // Set the default WhatsApp link
-    whatsappLink.href = `https://wa.me/${defaultWhatsAppNumber}`;
-
-    // Function to dynamically change the WhatsApp number
-    function changeWhatsAppNumber(newNumber) {
-        if (newNumber && typeof newNumber === 'string') {
-            whatsappLink.href = `https://wa.me/${newNumber}`;
-        } else {
-            console.error("Invalid WhatsApp number. Please provide a valid string.");
-        }
-    }
-
-    // Select all social media icons
-    const socialIcons = document.querySelectorAll('#social-icons a');
-
-    socialIcons.forEach(icon => {
-        // Add the respective social media links
-        icon.href = icon.getAttribute("href"); // Links are already set in HTML
-
-        // Dynamically adjust the size of the icons
-        icon.style.width = "40px";  // Set the width
-        icon.style.height = "40px"; // Set the height
-
-        // Optional: Add a class for additional styles
-        icon.classList.add("social-icon");
-    });
-
-    // Add edit functionality for blocks on the left side (for development only)
-    const editableBlocks = document.querySelectorAll(".block");
-    editableBlocks.forEach((block) => {
-        block.setAttribute("contenteditable", "true");
-        block.addEventListener("blur", () => {
-            alert("Changes saved!");
-            // Optionally save changes here, e.g., localStorage or server API
-        });
-    });
-
-    // Lock content for deployed version (disable contenteditable)
-    const isProduction = true; // Set this flag to `true` for production
-    if (isProduction) {
-        editableBlocks.forEach((block) => {
-            block.setAttribute("contenteditable", "false");
-            block.style.backgroundColor = "#f9f9f9"; // Optional: visually indicate locked content
-        });
-    }
 });
