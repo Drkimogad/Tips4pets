@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const adminPhoto = document.getElementById("admin-photo");
     adminPhoto.src = "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
 
-    // Add edit functionality for blocks on the left side
+    // Add edit functionality for blocks on the left side (for development only)
     const editableBlocks = document.querySelectorAll(".block");
     editableBlocks.forEach((block) => {
         block.setAttribute("contenteditable", "true");
@@ -24,4 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // Optionally save changes here, e.g., localStorage or server API
         });
     });
+
+    // Lock content for deployed version (disable contenteditable)
+    const isProduction = true; // Set this flag to `true` for production
+    if (isProduction) {
+        editableBlocks.forEach((block) => {
+            block.setAttribute("contenteditable", "false");
+            block.style.backgroundColor = "#f9f9f9"; // Optional: visually indicate locked content
+        });
+    }
 });
