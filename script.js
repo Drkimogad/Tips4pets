@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     adminPhoto.src = "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
 
     // WhatsApp number - Allow to change dynamically
-    const whatsappNumber = '0027813444455'; // Default number
+    const whatsappNumber = '123456789'; // Default number
     const whatsappLink = document.getElementById("whatsapp-link");
     whatsappLink.href = `https://wa.me/${whatsappNumber}`;
     
     // Allow to change the WhatsApp number (could be set dynamically in your script)
     // Example: dynamically set the WhatsApp number
-    function changeWhatsAppNumber(newNumber) {
-        whatsappLink.href = `https://wa.me/${newNumber}`;
+    function changeWhatsAppNumber(0027813444455) {
+        whatsappLink.href = `https://wa.me/${0027813444455}`;
     }
 
     // Social Media Icons links (positioned under WhatsApp)
