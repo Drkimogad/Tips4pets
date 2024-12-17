@@ -26,12 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
         whatsappLink.href = `https://wa.me/${0027813444455}`;
     }
 
-    // Social Media Icons links (positioned under WhatsApp)
-    const socialIcons = document.querySelectorAll('#social-icons a');
-    socialIcons.forEach(icon => {
-        // Add the respective social media links
-        icon.href = icon.getAttribute("href"); // Links are already set in HTML
-    });
+    // Select all social media icons
+const socialIcons = document.querySelectorAll('#social-icons a');
+
+socialIcons.forEach(icon => {
+    // Add the respective social media links
+    icon.href = icon.getAttribute("href"); // Links are already set in HTML
+    
+    // Dynamically adjust the size of the icons
+    icon.style.width = "40px";  // Set the width
+    icon.style.height = "40px"; // Set the height
+
+    // Optional: Add a class for additional styles
+    icon.classList.add("social-icon");
+});
+
 
     // Add edit functionality for blocks on the left side (for development only)
     const editableBlocks = document.querySelectorAll(".block");
