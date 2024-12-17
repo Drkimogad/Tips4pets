@@ -52,7 +52,7 @@ html, body {
 }
 
 .left-container, .right-container {
-    height: 100%; /* Full height for both sides */
+    height: 80%; /* for both sides */
 }
 
 .hero-banner {
@@ -68,7 +68,7 @@ html, body {
 /* Left Side */
 .left-container {
     width: 45%;
-    background-color: #f0f0f0;  /* New background color for left side */
+    background-color: #FFCE1B;  /* New background color for left side */
     padding: 20px;
     box-sizing: border-box;
 }
@@ -102,7 +102,7 @@ html, body {
 }
 
 #admin-photo {
-    width: 100%;
+    width: 60%;
     height: 100%;
     object-fit: cover;
 }
