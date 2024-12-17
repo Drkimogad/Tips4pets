@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function changeWhatsAppNumber(newNumber) {
         whatsappLink.href = `https://wa.me/${newNumber}`;
     }
-    
-    // Social Media Icons links
+
+    // Social Media Icons links (positioned under WhatsApp)
     const socialIcons = document.querySelectorAll('#social-icons a');
     socialIcons.forEach(icon => {
         // Add the respective social media links
