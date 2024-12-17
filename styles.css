@@ -40,15 +40,37 @@ nav .logo h1 {
 }
 
 /* Main Container */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 .main-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    height: 100vh; /* Full height */
+}
+
+.left-container, .right-container {
+    height: 100%; /* Full height for both sides */
+}
+
+.hero-banner {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 /* Left Side */
 .left-container {
     width: 45%;
+    background-color: #f0f0f0;  /* New background color for left side */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .block {
@@ -70,23 +92,6 @@ nav .logo h1 {
 /* Right Side */
 .right-container {
     width: 50%;
-    position: relative;
-}
-
-.hero-banner {
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.hero-banner h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.hero-banner p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
 }
 
 .image-container {
@@ -133,13 +138,13 @@ nav .logo h1 {
 
 #social-icons a {
     display: inline-block;
-    margin: 0 10px; /* Add space between icons */
+    margin: 0 10px; /* Space between icons */
 }
 
 .social-icon {
-    width: 40px; /* Set width */
-    height: 40px; /* Set height */
-    object-fit: contain; /* Ensure image maintains its aspect ratio */
+    width: 40px; /* Icon size */
+    height: 40px;
+    object-fit: contain; /* Ensure icon retains its aspect ratio */
 }
 
 /* Footer */
