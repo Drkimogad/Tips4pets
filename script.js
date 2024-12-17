@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     whatsappLink.href = `https://wa.me/${defaultWhatsAppNumber}`;
 
     // Function to dynamically change the WhatsApp number
-    function changeWhatsAppNumber(newNumber) {
+    function changeWhatsAppNumber(0027720138750) {
         if (newNumber && typeof newNumber === 'string') {
             whatsappLink.href = `https://wa.me/${newNumber}`;
         } else {
