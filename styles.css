@@ -52,12 +52,12 @@ html, body {
 }
 
 .left-container, .right-container {
-    height: 80%; /* for both sides */
+    height: 50%; /* for right side */
 }
 
 .hero-banner {
     padding: 20px;
-    background-color: #fff;
+    background-color: #ff6ec7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 100%; /* Full height */
     display: flex;
