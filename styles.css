@@ -143,8 +143,8 @@ body {
 }
 
 .social-icon {
-    width: 20px; /* Set size */
-    height: 20px;
+    width: 10px; /* Set size */
+    height: 10px;
     object-fit: contain;
 }
 
