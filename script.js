@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // WhatsApp Number Script - Allow dynamic number changes
 
     // Default WhatsApp number
-    const defaultWhatsAppNumber = '123456789';
+    const defaultWhatsAppNumber = '0027720138750';
     const whatsappLink = document.getElementById("whatsapp-link");
 
     // Set the default WhatsApp link
     whatsappLink.href = `https://wa.me/${defaultWhatsAppNumber}`;
 
     // Function to dynamically change the WhatsApp number
-    function changeWhatsAppNumber(0027720138750) {
+    function changeWhatsAppNumber(newNumber) {
         if (newNumber && typeof newNumber === 'string') {
             whatsappLink.href = `https://wa.me/${newNumber}`;
         } else {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     socialIcons.forEach(icon => {
         // Add the respective social media links
         icon.href = icon.getAttribute("href"); // Links are already set in HTML
-        
+
         // Dynamically adjust the size of the icons
         icon.style.width = "40px";  // Set the width
         icon.style.height = "40px"; // Set the height
