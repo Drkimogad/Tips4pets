@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // WhatsApp number - Allow to change dynamically
     const whatsappNumber = '123456789'; // Default number
     const whatsappLink = document.getElementById("whatsapp-link");
-    whatsappLink.href = `https://wa.me/${whatsappNumber}`;
+    whatsappLink.href = `https://wa.me/${0027813444455}`;
     
     // Allow to change the WhatsApp number (could be set dynamically in your script)
     // Example: dynamically set the WhatsApp number
