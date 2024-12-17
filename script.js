@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     adminPhoto.src = "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
 
     // WhatsApp number - Allow to change dynamically
-    const whatsappNumber = '1234567890'; // Default number
+    const whatsappNumber = '0027813444455'; // Default number
     const whatsappLink = document.getElementById("whatsapp-link");
     whatsappLink.href = `https://wa.me/${whatsappNumber}`;
     
