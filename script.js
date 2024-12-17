@@ -15,39 +15,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const adminPhoto = document.getElementById("admin-photo");
     adminPhoto.src = "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
 
-    // WhatsApp Number Script - Allow dynamic number changes
+    // Default WhatsApp number
+    let whatsappNumber = '123456789'; // Default number
 
-// Default WhatsApp number
-const defaultWhatsAppNumber = '123456789';
-const whatsappLink = document.getElementById("whatsapp-link");
+    // WhatsApp link element
+    const whatsappLink = document.getElementById("whatsapp-link");
 
-// Set the default WhatsApp link
-whatsappLink.href = `https://wa.me/${defaultWhatsAppNumber}`;
+    // Set the initial WhatsApp link
+    whatsappLink.href = `https://wa.me/${whatsappNumber}`;
 
-// Function to dynamically change the WhatsApp number
-function changeWhatsAppNumber(newNumber) {
-    if (newNumber && typeof newNumber === 'string') {
-        whatsappLink.href = `https://wa.me/${newNumber}`;
-    } else {
-        console.error("Invalid WhatsApp number. Please provide a valid string.");
+    // Function to dynamically change the WhatsApp number
+    function changeWhatsAppNumber(newNumber) {
+        if (newNumber && typeof newNumber === 'string') {
+            whatsappLink.href = `https://wa.me/${newNumber}`;
+        } else {
+            console.error("Invalid WhatsApp number. Please provide a valid string.");
+        }
     }
-}
+
+    // Example usage of changing the number dynamically
+    // changeWhatsAppNumber('0027813444455'); // Call this function with the new number when needed
 
     // Select all social media icons
-const socialIcons = document.querySelectorAll('#social-icons a');
+    const socialIcons = document.querySelectorAll('#social-icons a');
 
-socialIcons.forEach(icon => {
-    // Add the respective social media links
-    icon.href = icon.getAttribute("href"); // Links are already set in HTML
-    
-    // Dynamically adjust the size of the icons
-    icon.style.width = "40px";  // Set the width
-    icon.style.height = "40px"; // Set the height
+    socialIcons.forEach(icon => {
+        // Add the respective social media links
+        icon.href = icon.getAttribute("href"); // Links are already set in HTML
+        
+        // Dynamically adjust the size of the icons
+        icon.style.width = "40px";  // Set the width
+        icon.style.height = "40px"; // Set the height
 
-    // Optional: Add a class for additional styles
-    icon.classList.add("social-icon");
-});
-
+        // Optional: Add a class for additional styles
+        icon.classList.add("social-icon");
+    });
 
     // Add edit functionality for blocks on the left side (for development only)
     const editableBlocks = document.querySelectorAll(".block");
