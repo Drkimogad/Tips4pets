@@ -1,6 +1,6 @@
 /* Left Side Container */
 .left-container {
-    width: 70%; /* Increased width to make the blocks larger */
+    width: 55%; /* Increased width to make the blocks larger */
     padding: 60px; /* Increased padding for more room */
     background-color: #f7f7f7;
     border-radius: 10px;
@@ -26,7 +26,7 @@
 
 /* Right Side Container */
 .right-container {
-    width: 30%; /* Adjusted width for balance */
+    width: 45%; /* Adjusted width for balance */
     padding: 50px; /* Increased padding */
 }
 
