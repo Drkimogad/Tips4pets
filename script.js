@@ -1,53 +1,68 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Event Listener for "About Us" Block Edit
-    document.getElementById("about-us-text").addEventListener("click", () => {
-        const aboutUsText = prompt("Edit About Us", document.getElementById("about-us-text").textContent);
-        if (aboutUsText !== null) {
-            document.getElementById("about-us-text").textContent = aboutUsText;
-        }
-    });
+    const isProduction = true; // Set to true for deployed version
 
-    // Event Listener for "Packages" Block Edit
-    document.getElementById("packages-list").addEventListener("click", () => {
-        const packagesText = prompt("Edit Packages", document.getElementById("packages-list").innerText);
-        if (packagesText !== null) {
-            document.getElementById("packages-list").innerText = packagesText;
-        }
-    });
-
-    // Event Listener for "Contact Us" Block Edit
-    document.getElementById("email").addEventListener("click", () => {
-        const newEmail = prompt("Edit Email", document.getElementById("email").textContent);
-        if (newEmail !== null) {
-            document.getElementById("email").textContent = newEmail;
-        }
-    });
-
-    // Event Listener for WhatsApp Edit
-    document.getElementById("whatsapp").addEventListener("click", () => {
-        const newWhatsApp = prompt("Edit WhatsApp", document.getElementById("whatsapp").textContent);
-        if (newWhatsApp !== null) {
-            document.getElementById("whatsapp").textContent = newWhatsApp;
-
-            // Update the WhatsApp link as well
-            const whatsappLink = document.getElementById("whatsapp-link");
-            if (whatsappLink) {
-                whatsappLink.href = `https://wa.me/${newWhatsApp}`;
+    // Functionality to edit blocks when in non-production mode
+    if (!isProduction) {
+        // Event Listener for "About Us" Block Edit
+        document.getElementById("about-us-text").addEventListener("click", () => {
+            const aboutUsText = prompt(
+                "Edit About Us",
+                document.getElementById("about-us-text").textContent
+            );
+            if (aboutUsText !== null) {
+                document.getElementById("about-us-text").textContent = aboutUsText;
             }
-        }
-    });
+        });
 
-    // Dynamically set the admin photo
+        // Event Listener for "Packages" Block Edit
+        document.getElementById("packages-list").addEventListener("click", () => {
+            const packagesText = prompt(
+                "Edit Packages",
+                document.getElementById("packages-list").innerText
+            );
+            if (packagesText !== null) {
+                document.getElementById("packages-list").innerText = packagesText;
+            }
+        });
+
+        // Event Listener for "Contact Us" Block Edit (Email)
+        document.getElementById("email").addEventListener("click", () => {
+            const newEmail = prompt(
+                "Edit Email",
+                document.getElementById("email").textContent
+            );
+            if (newEmail !== null) {
+                document.getElementById("email").textContent = newEmail;
+            }
+        });
+
+        // Event Listener for "Contact Us" Block Edit (WhatsApp)
+        document.getElementById("whatsapp").addEventListener("click", () => {
+            const newWhatsApp = prompt(
+                "Edit WhatsApp Number",
+                document.getElementById("whatsapp").textContent
+            );
+            if (newWhatsApp !== null) {
+                document.getElementById("whatsapp").textContent = newWhatsApp;
+            }
+        });
+    }
+
+    // Disable editing functionality for production mode
+    if (isProduction) {
+        const blocks = document.querySelectorAll(".block");
+        blocks.forEach((block) => {
+            block.style.cursor = "default"; // Prevent pointer feedback
+            block.onclick = null; // Disable clicking for editing
+        });
+    }
+
+    // Set the admin photo dynamically
     const adminPhoto = document.getElementById("admin-photo");
-    adminPhoto.src = "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
-});
+    adminPhoto.src =
+        "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
 
-// Lock content for deployed version (disable contenteditable)
-const isProduction = true; // Set this flag to `true` for production
-if (isProduction) {
-    const editableBlocks = document.querySelectorAll(".block");
-    editableBlocks.forEach((block) => {
-        block.setAttribute("contenteditable", "false");
-        block.style.backgroundColor = "#f9f9f9"; // Optional: visually indicate locked content
-    });
-}
+    // WhatsApp number and link functionality (already updated in HTML)
+    const whatsappLink = document.getElementById("whatsapp-link");
+    whatsappLink.href = "https://wa.me/0027813444455";
+});
