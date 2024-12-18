@@ -26,7 +26,7 @@
 
 /* Right Side Container */
 .right-container {
-    width: 45%; /* Adjusted width for balance */
+    width: 40%; /* Adjusted width for balance */
     padding: 50px; /* Increased padding */
 }
 
@@ -41,7 +41,7 @@
 }
 
 .hero-banner h1 {
-    font-size: 40px; /* Increased header size */
+    font-size: 80px; /* Increased header size */
     margin-bottom: 40px; /* More space between the title and description */
     width: 100%; /* Ensure header takes up full width */
     text-align: center; /* Center the header */
