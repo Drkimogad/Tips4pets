@@ -11,7 +11,7 @@
 
 /* Left Side Container */
 .left-container {
-    width: 55%; /* Takes up 55% of the space */
+    width: 40%; /* Takes up 40% of the space */
     padding: 40px;
     background-color: #f7f7f7;
     border-radius: 10px;
@@ -21,7 +21,7 @@
 
 /* Right Side Container */
 .right-container {
-    width: 45%; /* Takes up 45% of the space */
+    width: 60%; /* Takes up 60% of the space */
     padding: 40px;
     box-sizing: border-box;
     overflow: auto; /* Allow content to be automatically contained */
