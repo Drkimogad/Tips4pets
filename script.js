@@ -1,47 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Define the readOnly flag
     const readOnly = true; // Set this to true for visitors and false for admin
 
-    // Function to edit text
-    function enableEditing(blockId, currentValue) {
-        if (!readOnly) {
-            const updatedValue = prompt("Edit Content", currentValue);
-            if (updatedValue !== null) {
-                document.getElementById(blockId).textContent = updatedValue;
-            }
-        }
-    }
-
-    // About Us Block
-    document.getElementById("about-us-text").addEventListener("click", () => {
-        enableEditing("about-us-text", document.getElementById("about-us-text").textContent);
-    });
-
-    // Packages Block
-    document.getElementById("packages-list").addEventListener("click", () => {
-        const currentList = [...document.querySelectorAll("#packages-list li")].map((li) => li.textContent).join("\n");
-        if (!readOnly) {
-            const updatedList = prompt("Edit Packages (one per line)", currentList);
-            if (updatedList !== null) {
-                const newItems = updatedList.split("\n").map((item) => `<li>${item.trim()}</li>`).join("");
-                document.getElementById("packages-list").innerHTML = newItems;
-            }
+    // Make blocks editable or non-editable based on readOnly flag
+    const blocks = document.querySelectorAll(".block");
+    blocks.forEach(block => {
+        if (readOnly) {
+            block.setAttribute("contenteditable", "false");
+        } else {
+            block.setAttribute("contenteditable", "true");
+            block.addEventListener("blur", () => {
+                alert("Changes saved!");
+                // Optionally save changes to server or localStorage here
+            });
         }
     });
 
-    // Contact Us Block - Email
-    document.getElementById("email").addEventListener("click", () => {
-        enableEditing("email", document.getElementById("email").textContent);
-    });
+    // Event Listeners for editing specific fields (if readOnly is false)
+    if (!readOnly) {
+        document.getElementById("about-us-text").addEventListener("click", () => {
+            const aboutUsText = prompt("Edit About Us", document.getElementById("about-us-text").textContent);
+            if (aboutUsText !== null) {
+                document.getElementById("about-us-text").textContent = aboutUsText;
+            }
+        });
 
-    // Contact Us Block - WhatsApp
-    document.getElementById("whatsapp").addEventListener("click", () => {
-        enableEditing("whatsapp", document.getElementById("whatsapp").textContent);
-    });
+        document.getElementById("packages-list").addEventListener("click", () => {
+            const packagesText = prompt("Edit Packages", document.getElementById("packages-list").innerText);
+            if (packagesText !== null) {
+                document.getElementById("packages-list").innerText = packagesText;
+            }
+        });
 
-    // Disable editing for read-only mode
-    if (readOnly) {
-        document.querySelectorAll(".block").forEach((block) => {
-            block.style.cursor = "default"; // Indicate that the block is non-editable
+        document.getElementById("email").addEventListener("click", () => {
+            const newEmail = prompt("Edit Email", document.getElementById("email").textContent);
+            if (newEmail !== null) {
+                document.getElementById("email").textContent = newEmail;
+            }
+        });
+
+        document.getElementById("whatsapp").addEventListener("click", () => {
+            const newWhatsApp = prompt("Edit WhatsApp Number", document.getElementById("whatsapp").textContent);
+            if (newWhatsApp !== null) {
+                document.getElementById("whatsapp").textContent = newWhatsApp;
+                document.getElementById("whatsapp-link").href = `https://wa.me/${newWhatsApp}`;
+            }
         });
     }
 });
