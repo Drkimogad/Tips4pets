@@ -8,80 +8,69 @@ body {
 .main-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    gap: 20px; /* Add space between the left and right containers */
+    padding: 30px;
+    gap: 30px; /* Increased space between the left and right containers */
 }
 
 /* Left Side Container */
 .left-container {
-    width: 50%; /* Ensure it takes 50% of the available space */
-    padding: 20px;
+    width: 55%; /* Increased width for better readability */
+    padding: 30px; /* Increased padding for more space */
     background-color: #f7f7f7;
     border-radius: 10px;
 }
 
 .block {
     background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 30px; /* Increased padding for more space */
+    margin-bottom: 30px; /* Increased margin to separate blocks */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .block h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 28px; /* Increased header size */
+    margin-bottom: 20px;
 }
 
 .block p {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-/* Styles for Editable Blocks */
-.block[contenteditable="true"] {
-    border: 2px solid #4CAF50; /* Green border for editable blocks */
-    background-color: #f9f9f9; /* Slightly different background for editable */
-}
-
-.block[contenteditable="false"] {
-    background-color: #e8e8e8; /* Light gray for non-editable blocks */
-    border: 2px solid #ccc; /* Gray border for non-editable */
-    opacity: 0.7; /* Reduced opacity for non-editable blocks */
-    pointer-events: none; /* Prevent interaction with non-editable blocks */
+    font-size: 18px; /* Increased paragraph font size */
+    margin: 15px 0;
 }
 
 /* Right Side Container */
 .right-container {
-    width: 45%; /* Ensure it takes 45% of the available space */
-    padding: 20px;
+    width: 40%; /* Reduced width slightly to balance the layout */
+    padding: 30px;
 }
 
 .hero-banner {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 40px; /* Increased padding */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensures image can be lifted properly */
 }
 
 .hero-banner h1 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.hero-banner p {
-    font-size: 18px;
+    font-size: 32px; /* Increased header size */
     margin-bottom: 20px;
 }
 
+.hero-banner p {
+    font-size: 20px; /* Increased paragraph font size */
+    margin-bottom: 30px;
+}
+
 #whatsapp-button a {
-    padding: 12px 20px;
+    padding: 15px 30px; /* Increased padding for a larger button */
     background-color: #25d366;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Slightly rounded corners for a better look */
     font-weight: bold;
+    font-size: 18px; /* Increased font size */
 }
 
 #social-icons {
@@ -91,8 +80,8 @@ body {
 }
 
 .social-icon {
-    width: 40px;
-    margin: 0 10px;
+    width: 50px; /* Increased size of social media icons */
+    margin: 0 15px; /* More space between icons */
 }
 
 footer {
