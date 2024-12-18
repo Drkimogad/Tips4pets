@@ -23,10 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Event Listener for WhatsApp Edit
     document.getElementById("whatsapp").addEventListener("click", () => {
-        const newWhatsApp = prompt("0027813444455", document.getElementById("whatsapp").textContent);
+        const newWhatsApp = prompt("Edit WhatsApp", document.getElementById("whatsapp").textContent);
         if (newWhatsApp !== null) {
-            document.getElementById("whatsapp").textContent = 0027813444455;
+            document.getElementById("whatsapp").textContent = newWhatsApp;
+
+            // Update the WhatsApp link as well
+            const whatsappLink = document.getElementById("whatsapp-link");
+            if (whatsappLink) {
+                whatsappLink.href = `https://wa.me/${newWhatsApp}`;
+            }
         }
     });
 
@@ -38,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Lock content for deployed version (disable contenteditable)
 const isProduction = false; // Set this flag to `true` for production
 if (isProduction) {
+    const editableBlocks = document.querySelectorAll(".block");
     editableBlocks.forEach((block) => {
         block.setAttribute("contenteditable", "false");
         block.style.backgroundColor = "#f9f9f9"; // Optional: visually indicate locked content
