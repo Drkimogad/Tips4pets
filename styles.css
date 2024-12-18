@@ -1,13 +1,36 @@
-/* Right Side Container */
-.right-container {
-    width: 30%;
-    padding: 40px;
+/* Main container: Flexbox layout */
+.main-container {
+    display: flex; /* Use flexbox to align left and right containers side by side */
+    justify-content: space-between; /* Ensure the containers are spaced properly */
+    align-items: flex-start; /* Align items to the top of the containers */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height to ensure it takes up the whole page */
+    padding: 0 20px; /* Some padding on both sides */
+    box-sizing: border-box; /* Make sure padding doesn't affect the layout */
 }
 
-/* Hero Banner Section */
+/* Left Side Container */
+.left-container {
+    width: 65%; /* Takes up 65% of the space */
+    padding: 40px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: auto; /* Allow content to be automatically contained */
+}
+
+/* Right Side Container */
+.right-container {
+    width: 30%; /* Takes up 30% of the space */
+    padding: 40px;
+    box-sizing: border-box;
+    overflow: auto; /* Allow content to be automatically contained */
+}
+
+/* Hero Banner */
 .hero-banner {
     background-color: #ffffff;
-    padding: 50px 50px 30px;
+    padding: 50px 50px 30px; /* Increased padding, especially at the top */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -15,60 +38,59 @@
     margin-top: 20px;
 }
 
-/* Hero Title (h1) */
-.hero-banner h1 {
-    font-size: 48px; /* Increased size for larger visibility */
-    margin-bottom: 20px; /* Space below the title */
-    width: 100%;
-    word-wrap: break-word;
-}
-
-/* Hero Description (p) */
-.hero-banner p {
-    font-size: 22px; /* Increased font size */
-    margin-bottom: 30px; /* Space between description and image */
-    max-width: 90%; /* Ensuring description takes up the available width */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Hero Image */
-.hero-banner .image-container {
-    width: 100%;
-    margin-bottom: 30px; /* Space between image and WhatsApp button */
-}
-
-.hero-banner #hero-image {
-    width: 100%; /* Make sure the image fits the width of the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px;
-}
-
-/* WhatsApp Button */
-#whatsapp-button {
-    margin-bottom: 30px; /* Space between WhatsApp button and social media icons */
-}
-
-#whatsapp-link {
-    display: inline-block;
-    background-color: #25D366; /* WhatsApp green color */
-    color: #fff;
-    font-size: 18px;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-}
-
 /* Social Media Icons */
 #social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    margin-top: 30px;
 }
 
-#social-icons .social-icon {
-    width: 50px; /* Increased icon size */
-    height: 50px;
-    object-fit: contain;
+.social-icon {
+    width: 40px; /* Icon size */
+    height: 40px; /* Icon size */
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* WhatsApp Button */
+#whatsapp-button {
+    margin-top: 30px;
+}
+
+#whatsapp-button a {
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+#whatsapp-button a:hover {
+    background-color: #128C7E;
+}
+
+/* Left Side Blocks */
+.block {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.block h3 {
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+.block p {
+    font-size: 22px;
+    margin: 20px 0;
 }
