@@ -1,68 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const isProduction = true; // Set to true for deployed version
+    const readOnly = true; // Set this to true for visitors and false for admin
 
-    // Functionality to edit blocks when in non-production mode
-    if (!isProduction) {
-        // Event Listener for "About Us" Block Edit
-        document.getElementById("about-us-text").addEventListener("click", () => {
-            const aboutUsText = prompt(
-                "Edit About Us",
-                document.getElementById("about-us-text").textContent
-            );
-            if (aboutUsText !== null) {
-                document.getElementById("about-us-text").textContent = aboutUsText;
+    // Function to edit text
+    function enableEditing(blockId, currentValue) {
+        if (!readOnly) {
+            const updatedValue = prompt("Edit Content", currentValue);
+            if (updatedValue !== null) {
+                document.getElementById(blockId).textContent = updatedValue;
             }
-        });
-
-        // Event Listener for "Packages" Block Edit
-        document.getElementById("packages-list").addEventListener("click", () => {
-            const packagesText = prompt(
-                "Edit Packages",
-                document.getElementById("packages-list").innerText
-            );
-            if (packagesText !== null) {
-                document.getElementById("packages-list").innerText = packagesText;
-            }
-        });
-
-        // Event Listener for "Contact Us" Block Edit (Email)
-        document.getElementById("email").addEventListener("click", () => {
-            const newEmail = prompt(
-                "Edit Email",
-                document.getElementById("email").textContent
-            );
-            if (newEmail !== null) {
-                document.getElementById("email").textContent = newEmail;
-            }
-        });
-
-        // Event Listener for "Contact Us" Block Edit (WhatsApp)
-        document.getElementById("whatsapp").addEventListener("click", () => {
-            const newWhatsApp = prompt(
-                "Edit WhatsApp Number",
-                document.getElementById("whatsapp").textContent
-            );
-            if (newWhatsApp !== null) {
-                document.getElementById("whatsapp").textContent = newWhatsApp;
-            }
-        });
+        }
     }
 
-    // Disable editing functionality for production mode
-    if (isProduction) {
-        const blocks = document.querySelectorAll(".block");
-        blocks.forEach((block) => {
-            block.style.cursor = "default"; // Prevent pointer feedback
-            block.onclick = null; // Disable clicking for editing
+    // About Us Block
+    document.getElementById("about-us-text").addEventListener("click", () => {
+        enableEditing("about-us-text", document.getElementById("about-us-text").textContent);
+    });
+
+    // Packages Block
+    document.getElementById("packages-list").addEventListener("click", () => {
+        const currentList = [...document.querySelectorAll("#packages-list li")].map((li) => li.textContent).join("\n");
+        if (!readOnly) {
+            const updatedList = prompt("Edit Packages (one per line)", currentList);
+            if (updatedList !== null) {
+                const newItems = updatedList.split("\n").map((item) => `<li>${item.trim()}</li>`).join("");
+                document.getElementById("packages-list").innerHTML = newItems;
+            }
+        }
+    });
+
+    // Contact Us Block - Email
+    document.getElementById("email").addEventListener("click", () => {
+        enableEditing("email", document.getElementById("email").textContent);
+    });
+
+    // Contact Us Block - WhatsApp
+    document.getElementById("whatsapp").addEventListener("click", () => {
+        enableEditing("whatsapp", document.getElementById("whatsapp").textContent);
+    });
+
+    // Disable editing for read-only mode
+    if (readOnly) {
+        document.querySelectorAll(".block").forEach((block) => {
+            block.style.cursor = "default"; // Indicate that the block is non-editable
         });
     }
-
-    // Set the admin photo dynamically
-    const adminPhoto = document.getElementById("admin-photo");
-    adminPhoto.src =
-        "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
-
-    // WhatsApp number and link functionality (already updated in HTML)
-    const whatsappLink = document.getElementById("whatsapp-link");
-    whatsappLink.href = "https://wa.me/0027813444455";
 });
