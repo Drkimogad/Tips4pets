@@ -46,16 +46,17 @@ body {
 
 .hero-banner {
     background-color: #ffffff;
-    padding: 50px; /* Increased padding for more space */
+    padding: 50px 50px 30px; /* Increased padding, especially at the top to make space for the buttons */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    margin-top: 20px; /* Added margin for spacing */
 }
 
 .hero-banner h1 {
     font-size: 36px; /* Increased header size */
-    margin-bottom: 25px; /* More space between the title and description */
+    margin-bottom: 30px; /* More space between the title and description */
 }
 
 .hero-banner p {
@@ -64,13 +65,14 @@ body {
 }
 
 #whatsapp-button a {
-    padding: 20px 40px; /* Increased padding for a larger button */
+    padding: 25px 50px; /* Increased padding for a larger button */
     background-color: #25d366;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 20px; /* Increased font size for better visibility */
+    font-size: 22px; /* Increased font size for better visibility */
+    margin-bottom: 25px; /* Added space between the WhatsApp button and the social icons */
 }
 
 #social-icons {
@@ -80,8 +82,8 @@ body {
 }
 
 .social-icon {
-    width: 60px; /* Increased size of social media icons */
-    margin: 0 20px; /* More space between icons */
+    width: 70px; /* Increased size of social media icons */
+    margin: 0 25px; /* More space between icons */
 }
 
 footer {
