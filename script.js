@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("whatsapp").addEventListener("click", () => {
         const newWhatsApp = prompt("0027720138750", document.getElementById("whatsapp").textContent);
         if (newWhatsApp !== null) {
-            document.getElementById("whatsapp").textContent = newWhatsApp;
+            document.getElementById("whatsapp").textContent = 0027720138750;
         }
     });
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Lock content for deployed version (disable contenteditable)
-const isProduction = true; // Set this flag to `true` for production
+const isProduction = false; // Set this flag to `true` for production
 if (isProduction) {
     editableBlocks.forEach((block) => {
         block.setAttribute("contenteditable", "false");
