@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialGrow</title>
+    <title>SocialGlow</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-    <header>
-        <div class="logo">
-            <h1>SocialGrow</h1>
-        </div>
-    </header>
-
+    <!-- Main Container -->
     <div class="main-container">
-        <!-- Left Side -->
+        <!-- Left Side - Editable Blocks -->
         <div class="left-container">
+            <div class="logo">
+                <h1>SocialGlow</h1>
+            </div>
+
             <!-- About Us Block -->
-            <div class="block about-us">
+            <div class="block about-us" id="about-us-text">
                 <h3>About Us</h3>
-                <p id="about-us-text">We help businesses shine online through tailored social media management and creative strategies. Let's make your brand stand out!</p>
-                <button onclick="editAboutUs()">Edit About Us</button>
+                <p>We help businesses shine online through tailored social media management and creative strategies. Let's make your brand stand out!</p>
             </div>
 
             <!-- Explore Packages Block -->
-            <div class="block explore">
+            <div class="block explore" id="packages-list">
                 <h3>Explore Our Packages</h3>
-                <ul id="packages-list">
+                <ul>
                     <li>Basic Social Media Setup</li>
                     <li>Content Creation Packages</li>
                     <li>Advanced Engagement Services</li>
                 </ul>
-                <button onclick="editPackages()">Edit Packages</button>
             </div>
 
             <!-- Contact Us Block -->
-            <div class="block contact">
+            <div class="block contact" id="contact-section">
                 <h3>Contact Us</h3>
-                <p>Email: <span id="email">Swiftreach2024@yahoo.com</span></p>
-                <button onclick="editEmail()">Edit Email</button>
-                <p>WhatsApp: <span id="whatsapp">0027813444455</span></p>
-                <button onclick="editWhatsApp()">Edit WhatsApp</button>
+                <p>Email: <span id="email">contact@socialglow.com</span></p>
+                <p>WhatsApp: <span id="whatsapp">+0027813444455</span></p>
             </div>
         </div>
 
-        <!-- Right Side -->
+        <!-- Right Side - Hero Banner -->
         <div class="right-container">
             <div class="hero-banner">
-                <h1 id="hero-title">Welcome to SocialGrow</h1>
+                <h1 id="hero-title">Welcome to SocialGlow</h1>
                 <p id="hero-description">Transform your online presence with our social media expertise. Let us help your brand shine on every platform.</p>
-                <div class="image-container">
-                    <img id="hero-image" src="https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg" alt="Hero Banner" />
-                </div>
-                <div id="whatsapp-button">
-                    <a id="whatsapp-link" href="https://wa.me/0027813444455" target="_blank">Chat on WhatsApp</a>
-                </div>
+                <img id="admin-photo" src="https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg" alt="Admin Photo" />
             </div>
 
-            <!-- Social Media Icons -->
+            <!-- Social Buttons -->
             <div id="social-icons">
-                <a href="https://facebook.com"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon"></a>
-                <a href="https://instagram.com"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://wa.me/0027813444455" target="_blank" id="whatsapp-link">
+                    <img src="whatsapp-icon.png" alt="WhatsApp" class="social-icon">
+                </a>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 SocialGrow. All rights reserved.</p>
+        <p>© 2024 SocialGlow. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
