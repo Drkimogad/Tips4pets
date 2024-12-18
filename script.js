@@ -34,3 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const adminPhoto = document.getElementById("admin-photo");
     adminPhoto.src = "https://raw.githubusercontent.com/Drkimogad/Tips4pets/main/Anni.jpg";
 });
+
+// Lock content for deployed version (disable contenteditable)
+const isProduction = true; // Set this flag to `true` for production
+if (isProduction) {
+    editableBlocks.forEach((block) => {
+        block.setAttribute("contenteditable", "false");
+        block.style.backgroundColor = "#f9f9f9"; // Optional: visually indicate locked content
+    });
+}
