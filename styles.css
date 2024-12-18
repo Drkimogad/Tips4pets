@@ -1,95 +1,110 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.main-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    gap: 30px; /* Increased space between the left and right containers */
-}
-
 /* Left Side Container */
 .left-container {
-    width: 65%; /* Further increased width to make blocks larger */
-    padding: 40px; /* Increased padding for more room */
+    width: 70%; /* Increased width to make the blocks larger */
+    padding: 60px; /* Increased padding for more room */
     background-color: #f7f7f7;
     border-radius: 10px;
 }
 
 .block {
     background-color: #ffffff;
-    padding: 40px; /* Further increased padding */
-    margin-bottom: 40px; /* Increased margin for more space between blocks */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 50px; /* Further increased padding */
+    margin-bottom: 50px; /* Increased margin for more space between blocks */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .block h3 {
-    font-size: 34px; /* Increased header size for better visibility */
-    margin-bottom: 25px; /* Increased space between header and content */
+    font-size: 38px; /* Increased header size for better visibility */
+    margin-bottom: 30px; /* Increased space between header and content */
 }
 
 .block p {
-    font-size: 22px; /* Increased paragraph font size for better readability */
-    margin: 20px 0; /* More space around paragraph text */
+    font-size: 24px; /* Increased paragraph font size for better readability */
+    margin: 25px 0; /* More space around paragraph text */
 }
 
 /* Right Side Container */
 .right-container {
-    width: 30%; /* Reduced slightly to balance the layout with the left container */
-    padding: 40px;
+    width: 30%; /* Adjusted width for balance */
+    padding: 50px; /* Increased padding */
 }
 
 .hero-banner {
     background-color: #ffffff;
-    padding: 50px 50px 30px; /* Increased padding, especially at the top to make space for the buttons */
-    border-radius: 10px;
+    padding: 60px 50px 40px; /* Increased padding, especially at the top */
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     position: relative;
-    margin-top: 20px; /* Added margin for spacing */
+    margin-top: 30px; /* Added margin for spacing */
 }
 
 .hero-banner h1 {
-    font-size: 36px; /* Increased header size */
-    margin-bottom: 30px; /* More space between the title and description */
+    font-size: 40px; /* Increased header size */
+    margin-bottom: 40px; /* More space between the title and description */
+    width: 100%; /* Ensure header takes up full width */
+    text-align: center; /* Center the header */
 }
 
 .hero-banner p {
-    font-size: 22px; /* Increased font size for better readability */
-    margin-bottom: 35px;
+    font-size: 24px; /* Increased font size for better readability */
+    margin-bottom: 40px; /* Increased margin */
 }
 
+/* WhatsApp Button */
 #whatsapp-button a {
-    padding: 25px 50px; /* Increased padding for a larger button */
-    background-color: #25d366;
-    color: #fff;
+    font-size: 20px; /* Increased font size for better visibility */
+    padding: 15px 30px; /* Increased button size */
+    border-radius: 25px; /* Rounded button */
+    background-color: #25d366; /* WhatsApp color */
+    color: white;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 22px; /* Increased font size for better visibility */
-    margin-bottom: 25px; /* Added space between the WhatsApp button and the social icons */
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
-#social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+/* Social Media Icons */
+#social-icons a {
+    margin: 0 15px; /* Increased spacing between icons */
 }
 
-.social-icon {
-    width: 70px; /* Increased size of social media icons */
-    margin: 0 25px; /* More space between icons */
+#social-icons img {
+    width: 50px; /* Increased icon size */
+    height: 50px; /* Increased icon size */
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .left-container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .right-container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .hero-banner {
+        padding: 40px 30px;
+    }
+
+    .hero-banner h1 {
+        font-size: 32px; /* Adjusted for smaller screens */
+    }
+
+    .hero-banner p {
+        font-size: 20px;
+    }
+
+    #whatsapp-button a {
+        font-size: 18px; /* Adjust button size */
+        padding: 12px 25px;
+    }
+
+    #social-icons img {
+        width: 40px; /* Adjust icon size for smaller screens */
+        height: 40px;
+    }
 }
