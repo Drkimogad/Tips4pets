@@ -14,74 +14,74 @@ body {
 
 /* Left Side Container */
 .left-container {
-    width: 55%; /* Increased width for better readability */
-    padding: 30px; /* Increased padding for more space */
+    width: 65%; /* Further increased width to make blocks larger */
+    padding: 40px; /* Increased padding for more room */
     background-color: #f7f7f7;
     border-radius: 10px;
 }
 
 .block {
     background-color: #ffffff;
-    padding: 30px; /* Increased padding for more space */
-    margin-bottom: 30px; /* Increased margin to separate blocks */
+    padding: 40px; /* Further increased padding */
+    margin-bottom: 40px; /* Increased margin for more space between blocks */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .block h3 {
-    font-size: 28px; /* Increased header size */
-    margin-bottom: 20px;
+    font-size: 34px; /* Increased header size for better visibility */
+    margin-bottom: 25px; /* Increased space between header and content */
 }
 
 .block p {
-    font-size: 18px; /* Increased paragraph font size */
-    margin: 15px 0;
+    font-size: 22px; /* Increased paragraph font size for better readability */
+    margin: 20px 0; /* More space around paragraph text */
 }
 
 /* Right Side Container */
 .right-container {
-    width: 40%; /* Reduced width slightly to balance the layout */
-    padding: 30px;
+    width: 30%; /* Reduced slightly to balance the layout with the left container */
+    padding: 40px;
 }
 
 .hero-banner {
     background-color: #ffffff;
-    padding: 40px; /* Increased padding */
+    padding: 50px; /* Increased padding for more space */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensures image can be lifted properly */
+    position: relative;
 }
 
 .hero-banner h1 {
-    font-size: 32px; /* Increased header size */
-    margin-bottom: 20px;
+    font-size: 36px; /* Increased header size */
+    margin-bottom: 25px; /* More space between the title and description */
 }
 
 .hero-banner p {
-    font-size: 20px; /* Increased paragraph font size */
-    margin-bottom: 30px;
+    font-size: 22px; /* Increased font size for better readability */
+    margin-bottom: 35px;
 }
 
 #whatsapp-button a {
-    padding: 15px 30px; /* Increased padding for a larger button */
+    padding: 20px 40px; /* Increased padding for a larger button */
     background-color: #25d366;
     color: #fff;
     text-decoration: none;
-    border-radius: 8px; /* Slightly rounded corners for a better look */
+    border-radius: 8px;
     font-weight: bold;
-    font-size: 18px; /* Increased font size */
+    font-size: 20px; /* Increased font size for better visibility */
 }
 
 #social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .social-icon {
-    width: 50px; /* Increased size of social media icons */
-    margin: 0 15px; /* More space between icons */
+    width: 60px; /* Increased size of social media icons */
+    margin: 0 20px; /* More space between icons */
 }
 
 footer {
