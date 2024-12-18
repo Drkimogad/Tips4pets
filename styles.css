@@ -68,7 +68,7 @@ body, html {
 .hero-banner h1 {
     font-size: 48px; /* Increased font size for title */
     margin-bottom: 20px;
-    text-align: left; /* Align to the left */
+    text-align: center; /* fill the whole space */
 }
 
 .hero-banner p {
@@ -85,7 +85,7 @@ body, html {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 /* Social Media Icons */
