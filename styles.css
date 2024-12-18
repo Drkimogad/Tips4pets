@@ -110,3 +110,108 @@ footer p {
     font-size: 16px;
     color: #333;
 }
+
+/* Mobile Responsiveness (Smartphones) */
+@media (max-width: 768px) {
+    /* Main container */
+    .main-container {
+        flex-direction: column; /* Stack the left and right containers vertically */
+        height: auto; /* Adjust height for smaller screens */
+        padding: 0 10px; /* Reduce padding */
+    }
+
+    /* Left Side Container */
+    .left-container {
+        width: 100%; /* Make the left container take full width */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Right Side Container */
+    .right-container {
+        width: 100%; /* Make the right container take full width */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+        padding: 40px 30px 20px; /* Adjust padding for smaller screens */
+        margin-top: 10px;
+    }
+
+    /* Social Media Icons */
+    #social-icons {
+        gap: 10px; /* Reduce space between icons */
+    }
+
+    /* WhatsApp Button */
+    #whatsapp-button a {
+        font-size: 16px; /* Reduce font size for smaller screens */
+        padding: 12px 25px; /* Adjust padding */
+    }
+
+    /* Left Side Blocks */
+    .block {
+        padding: 25px; /* Reduce padding */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .block h3 {
+        font-size: 28px; /* Adjust font size */
+    }
+
+    .block p {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+/* Small Mobile Responsiveness (Smartphones) */
+@media (max-width: 480px) {
+    /* Main container */
+    .main-container {
+        padding: 0 5px; /* Further reduce padding for smaller screens */
+    }
+
+    /* Left Side Container */
+    .left-container, .right-container {
+        padding: 10px; /* Reduce padding further */
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+        padding: 30px 20px 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Social Media Icons */
+    #social-icons {
+        gap: 5px; /* Further reduce space between icons */
+    }
+
+    /* WhatsApp Button */
+    #whatsapp-button a {
+        font-size: 14px; /* Further reduce font size */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    /* Left Side Blocks */
+    .block {
+        padding: 20px; /* Further reduce padding */
+    }
+
+    .block h3 {
+        font-size: 24px; /* Further adjust font size */
+    }
+
+    .block p {
+        font-size: 16px; /* Further adjust font size */
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 12px; /* Further adjust font size */
+    }
+}
