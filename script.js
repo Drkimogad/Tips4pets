@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Lock content for deployed version (disable contenteditable)
-const isProduction = false; // Set this flag to `true` for production
+const isProduction = true; // Set this flag to `true` for production
 if (isProduction) {
     const editableBlocks = document.querySelectorAll(".block");
     editableBlocks.forEach((block) => {
