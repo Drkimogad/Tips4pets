@@ -1,130 +1,122 @@
+/* Full Page Layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Main Container */
 .main-container {
-    display: flex; /* Align left and right containers side by side */
-    justify-content: space-between; /* Add space between the left and right containers */
+    display: flex;
     width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
     padding: 40px;
-    box-sizing: border-box;
 }
 
 /* Left Side Container */
 .left-container {
-    width: 70%; /* Increased width to make the blocks larger */
-    padding: 40px; /* Increased padding for more room */
+    width: 65%;
+    padding: 40px;
     background-color: #f7f7f7;
     border-radius: 10px;
     display: flex;
-    flex-direction: column; /* Ensure the blocks stack vertically */
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Left Side Blocks */
+.block {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.block h3 {
+    font-size: 36px; /* Increased header size */
+    margin-bottom: 25px;
+}
+
+.block p {
+    font-size: 24px; /* Increased paragraph font size */
+    margin: 20px 0;
 }
 
 /* Right Side Container */
 .right-container {
-    width: 30%; /* Adjusted width for balance */
+    width: 30%;
     padding: 40px;
     display: flex;
-    flex-direction: column; /* Stack hero and social buttons vertically */
-}
-
-/* Blocks within Left Container */
-.block {
-    background-color: #ffffff;
-    padding: 50px;
-    margin-bottom: 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.block h3 {
-    font-size: 38px; /* Increased header size for better visibility */
-    margin-bottom: 30px;
-}
-
-.block p {
-    font-size: 24px; /* Increased font size for better readability */
-    margin: 25px 0;
+    flex-direction: column;
 }
 
 /* Hero Banner */
 .hero-banner {
     background-color: #ffffff;
-    padding: 60px 50px 40px;
-    border-radius: 12px;
+    padding: 50px 50px 30px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    margin-top: 30px;
+    margin-top: 20px;
+    flex: 1;
 }
 
 .hero-banner h1 {
-    font-size: 40px;
-    margin-bottom: 40px;
-    width: 100%;
+    font-size: 48px; /* Increased font size for title */
+    margin-bottom: 20px;
+    text-align: left; /* Align to the left */
 }
 
 .hero-banner p {
     font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
-/* WhatsApp Button */
-#whatsapp-button a {
-    font-size: 20px;
-    padding: 15px 30px;
-    border-radius: 25px;
-    background-color: #25d366;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
+.image-container {
+    margin-bottom: 20px;
+}
+
+/* Admin Image Section */
+#admin-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
 
 /* Social Media Icons */
+#social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 #social-icons a {
     margin: 0 15px;
+    display: inline-block;
 }
 
 #social-icons img {
-    width: 50px;
-    height: 50px;
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
 }
 
-/* Footer Styling */
-footer {
-    text-align: center;
-    margin-top: 40px;
+/* WhatsApp Button */
+#whatsapp-button a {
+    background-color: #25d366;
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 20px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .main-container {
-        flex-direction: column; /* Stack the containers vertically on small screens */
-        align-items: center;
-    }
-
-    .left-container, .right-container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .hero-banner {
-        padding: 40px 30px;
-    }
-
-    .hero-banner h1 {
-        font-size: 32px;
-    }
-
-    .hero-banner p {
-        font-size: 20px;
-    }
-
-    #whatsapp-button a {
-        font-size: 18px;
-        padding: 12px 25px;
-    }
-
-    #social-icons img {
-        width: 40px;
-        height: 40px;
-    }
+#whatsapp-button a:hover {
+    background-color: #128c7e;
 }
