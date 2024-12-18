@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("whatsapp").addEventListener("click", () => {
-        const newWhatsApp = prompt("0027720138750", document.getElementById("whatsapp").textContent);
+        const newWhatsApp = prompt("0027813444455", document.getElementById("whatsapp").textContent);
         if (newWhatsApp !== null) {
-            document.getElementById("whatsapp").textContent = 0027720138750;
+            document.getElementById("whatsapp").textContent = 0027813444455;
         }
     });
 
